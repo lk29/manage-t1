@@ -18,10 +18,18 @@ c.command('get <endpoint>').action(async endpoint => {
   console.log(pretty.render(await t1.api[endpoint]))
 })
 
+c.command('set <endpoint> <value>').action((endpoint, value) => {
+  t1.api[endpoint] = value
+})
+
 c.command('autotune <mode>').action(async mode => {
   t1.autoTune = mode
 })
 
 c.command('schedule <file>').action(createSchedule)
+
+if (!process.argv.slice(2).length) {
+  c.outputHelp()
+}
 
 c.parse(process.argv)
