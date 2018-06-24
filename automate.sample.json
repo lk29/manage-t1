@@ -1,0 +1,25 @@
+[
+  {
+    "host": "10.0.1.247",
+    "password": "admin",
+    "profile": {
+      "metric": "time",
+      "events": [
+        { "dayOfWeek": 0, "hour": 9, "command": ["setAutoTune", "efficiency"]},
+        { "dayOfWeek": 0, "hour": 22, "command": ["setAutoTune", "performance"]},
+        { "dayOfWeek": 1, "hour": 14, "command": ["setAutoTune", "efficiency"]},
+        { "dayOfWeek": 1, "hour": 22, "command": ["setAutoTune", "performance"]},
+        { "dayOfWeek": 2, "hour": 14, "command": ["setAutoTune", "efficiency"]},
+        { "dayOfWeek": 2, "hour": 22, "command": ["setAutoTune", "performance"]},
+        { "dayOfWeek": 3, "hour": 14, "command": ["setAutoTune", "efficiency"]},
+        { "dayOfWeek": 3, "hour": 22, "command": ["setAutoTune", "performance"]},
+        { "dayOfWeek": 4, "hour": 14, "command": ["setAutoTune", "efficiency"]},
+        { "dayOfWeek": 4, "hour": 22, "command": ["setAutoTune", "performance"]},
+        { "dayOfWeek": 5, "hour": 14, "command": ["setAutoTune", "efficiency"]},
+        { "dayOfWeek": 5, "hour": 22, "command": ["setAutoTune", "performance"]},
+        { "dayOfWeek": 6, "hour": 9, "command": ["setAutoTune", "efficiency"]},
+        { "dayOfWeek": 6, "hour": 22, "command": ["setAutoTune", "performance"]}
+      ]
+    }
+  }
+]

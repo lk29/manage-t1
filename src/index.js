@@ -2,6 +2,7 @@ require('dotenv').config()
 const c = require('commander')
 const pretty = require('prettyjson')
 const { T1 } = require('./t1.js')
+const createSchedule = require('./schedule')
 
 const t1 = new T1({
   username: process.env.T1_USERNAME || 'admin',
@@ -18,5 +19,7 @@ c.command('get <endpoint>').action(async endpoint => {
 c.command('autotune <mode>').action(async mode => {
   t1.autoTune = mode
 })
+
+c.command('schedule <file>').action(createSchedule)
 
 c.parse(process.argv)
