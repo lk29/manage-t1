@@ -1,4 +1,6 @@
 require('dotenv').config()
+const c = require('commander')
+const pretty = require('prettyjson')
 const { T1 } = require('./t1.js')
 
 const t1 = new T1({
@@ -9,15 +11,12 @@ const t1 = new T1({
   port: process.env.T1_PORT || '80',
 })
 
-async function main() {
-  console.log(await t1.api.summary)
-  console.log(
-    await (t1.api.updatePassword = {
-      user: 'admin',
-      currentPassword: process.env.T1_PASSWORD,
-      newPassword: 'blah',
-    }),
-  )
-}
+c.command('get <endpoint>').action(async endpoint => {
+  console.log(pretty.render(await t1.api[endpoint]))
+})
 
-main()
+c.command('autotune <mode>').action(async mode => {
+  t1.autoTune = mode
+})
+
+c.parse(process.argv)

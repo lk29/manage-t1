@@ -52,6 +52,14 @@ class T1 {
       },
     )
   }
+
+  set autoTune(autotune) {
+    const modes = ['performance', 'factory', 'balanced', 'efficiency']
+    if (!modes.includes(autotune)) {
+      throw new Error(`${autotune} not one of ${modes}`)
+    }
+    this.api.setAutoTune = { autotune }
+  }
 }
 
 module.exports = { getToken, T1Fetch, T1 }
