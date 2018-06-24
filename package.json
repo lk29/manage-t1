@@ -12,8 +12,7 @@
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/mattbailey/manage-t1.git"
-  }
-  
+ },
   "author": "Matt Bailey <m@mdb.io>",
   "license": "ISC",
   "devDependencies": {
