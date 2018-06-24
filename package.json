@@ -3,10 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "bin": {
+    "manage-t1": "src/index.js"
   },
-  "author": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mattbailey/manage-t1.git"
+  }
+  
+  "author": "Matt Bailey <m@mdb.io>",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^5.0.0",

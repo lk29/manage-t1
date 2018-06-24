@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 require('dotenv').config()
 const c = require('commander')
 const pretty = require('prettyjson')
